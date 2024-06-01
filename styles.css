@@ -23,10 +23,6 @@ body {
   justify-content: center;
 }
 
-.container {
-	padding: 40px;
-}
-
 .container h1, .container > p {
 	text-align: center;
 }
@@ -35,8 +31,16 @@ h1, p {
 	color: var(--grayish-blue);
 }
 
+.container {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container h1 {
 	font-weight: normal;
+	margin: 20px 40px;
 }
 
 .container h1 span {
@@ -45,7 +49,7 @@ h1, p {
 }
 
 .container p {
-	margin: 20px 0 40px;
+	margin: 20px 30px 40px;
 	line-height: 1.7;
 }
 
@@ -97,6 +101,15 @@ line-height: 1.7;
 		
 	}
 
+	.container p {
+		margin: 20px 0 40px;
+	}
+
+	.container h1, .content {
+		width: 50%;
+		margin: 0 auto 45px !important;
+	}
+
 	.card {
 		width: 48%;
 		padding: 30px;
@@ -114,11 +127,6 @@ line-height: 1.7;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: repeat(2, 1fr);
 		justify-content: center;
-	}
-
-	.container h1 {
-		width: 50%;
-		margin: auto;
 	}
 
 	.card {
