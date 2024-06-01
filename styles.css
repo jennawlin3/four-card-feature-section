@@ -116,6 +116,11 @@ line-height: 1.7;
 		justify-content: center;
 	}
 
+	.container h1 {
+		width: 50%;
+		margin: auto;
+	}
+
 	.card {
 		width: 380px;
 		height: 300px;
