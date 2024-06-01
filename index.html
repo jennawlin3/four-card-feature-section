@@ -6,11 +6,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
-
-  <title>Frontend Mentor | Interactive rating component</title>
+  <title>Frontend Mentor | Four card feature section</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -18,59 +17,40 @@
   </style>
 </head>
 <body>
-
-  <!-- Rating state start -->
   <main class="container">
-    <section class="rating">
-<a href="#" class="rating-btn"><span class="star-btn"></span></a>
-<h1>How did we do?</h1>
+    <h1>  Reliable, efficient delivery
+  <span>Powered by Technology</span></h1>
+  <p class="content"> Our Artificial Intelligence powered tools use millions of project data points 
+  to ensure that your project is successful</p>
+  <section class="cards">
+    <div class="card one">
+      <h2>Supervisor</h2>
+      <p>Monitors activity to identify project roadblocks</p>
+      <img src="images/icon-supervisor.svg">
+    </div>
+    <div class="card two">
+      <h2>Team Builder</h2>
+      <p>Scans our talent network to create the optimal team for your project</p>
+      <img src="images/icon-team-builder.svg">
+    </div>
+    <div class="card three">
+      <h2>Karma</h2>
+      <p>Regularly evaluates our talent to ensure quality</p>
+      <img src="images/icon-karma.svg">
+    </div>
+    <div class="card four">
+      <h2>Calculator</h2>
+      <p>Uses data from past projects to provide better delivery estimates</p>
+      <img src="images/icon-calculator.svg">
+    </div>
+  </section>
+  </main>
 
-  <p>Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!</p>
-<form>
-  <section class="rating-stat">
-    <div class="rating-number">
-      <input type="radio" id="one" value="1">
-      <label class="number">1</label>
-    </div>
-    <div class="rating-number">
-      <input type="radio" id="two" value="2">
-      <label class="number">2</label>
-    </div>
-    <div class="rating-number">
-      <input type="radio" id="three" value="3">
-      <label class="number">3</label>
-    </div>
-    <div class="rating-number">
-      <input type="radio" id="four" value="4">
-      <label class="number">4</label>
-    </div>
-    <div class="rating-number">
-      <input type="radio" id="five" value="5">
-      <label class="number">5</label>
-    </div>
-</section>
-  <input name="submit" type="submit" id="submit">
-</form>
-      
-</section>
-  <!-- Rating state end -->
-<section id="result" class="hide">
-  <!-- Thank you state start -->
-<img src="images/illustration-thank-you.svg">
-<p class="result-msg">You selected <span id="number"></span> out of 5</p>
-  <h2>Thank you!</h2>
-
-  <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!</p>
-
-  <!-- Thank you state end -->
-</section>
- </main> 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a>.
-  </div>
-  <script src="script.js"></script>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://app.netlify.com/teams/jennawlin3">Jenn Acosta</a>.
+    </p>
+  </footer>
 </body>
 </html>

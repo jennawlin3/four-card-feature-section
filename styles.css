@@ -1,137 +1,153 @@
 * {
-	margin: 0;
 	box-sizing: border-box;
+	margin: 0;
 }
 
-:root {
-	--orange: hsl(25, 97%, 53%);
-	--white: hsl(0, 0%, 100%);
-	--light-grey: hsl(217, 12%, 63%);
-	--medium-grey: hsl(216, 12%, 54%);
-	--dark-blue: hsl(213, 19%, 18%);
-	--very-dark-blue: hsl(216, 12%, 8%);
+:root {	
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+	--very-dark-blue: hsl(234, 12%, 34%);
+	--grayish-blue: hsl(229, 6%, 66%);
+	--very-light-gray: hsl(0, 0%, 98%);
 }
 
 body {
-	background-color: var(--very-dark-blue);
-  font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
+	background-color: var(--very-light-gray);
+	display: grid;
+	width: 100vw;
+	min-height: 100vh;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
+  justify-content: center;
 }
 
-.container {
-	display: flex;
-	flex-direction: column;
-	background-color: var(--dark-blue);
-	border-radius: 20px;
-	margin: 30vh auto;
-	padding: 30px;
-	width: 90vw;
-	height: auto;
-}
-
-.rating-btn {
-	display: inline-flex;
-	align-content: center;
-	background-color: #34404e;
-	border-radius: 50%;
-	padding: 10px;
-}
-
-.star-btn {
-	background: url(images/icon-star.svg);
-	background-repeat: no-repeat;
-	padding: 10px;
-}
-
-.rating h1, #result h2 {
-	color: var(--white);
-	padding: 20px 0;
-}
-
-p {
-	color: var(--light-grey);
-	padding-bottom: 20px;
-	line-height: 1.7;
-}
-
-.rating-stat {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px 0;
-	margin-bottom: 30px;
-}
-
-input[type="radio"] {
-	display: none;
-}
-
-.rating-number {
-	background-color: #34404e;
-	padding: 20px 25px;
-	border-radius: 50%;
-	text-decoration: none;
-	box-shadow: 2px 2px 2px var(--very-dark-blue);
-	color: var(--light-grey);
-	font-weight: 400;
-}
-
-.active {
-	background-color: var(--medium-grey);
-	color: var(--white);
-}
-
-.rating-number:hover, .number:hover {
-	background-color: var(--orange);
-	color: var(--white);
-	cursor: pointer;
-}
-
-#submit {
-	width: 100%;
-	height: 50px;
-	border-radius: 25px;
-	background-color: var(--orange);
-	color: var(--white); 
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	border: none;
-	cursor: pointer;
-}
-
-#submit:hover {
-	background-color: var(--white);
-	color: var(--orange);
-}
-
-#result {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	display: none;
-}
-
-.result-msg {
-	background-color: #34404e;
-	margin-top: 30px;
-	padding: 6px 10px;
-	border-radius: 20px;
-	color: var(--orange);
-	box-shadow: 2px 2px 2px var(--very-dark-blue);
-}
-
-#result p {
+.container h1, .container > p {
 	text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-	.container {
-	width: 400px;
+h1, p {
+	color: var(--grayish-blue);
+}
+
+.container {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+	font-weight: normal;
+	margin: 20px 40px;
+}
+
+.container h1 span {
+	font-weight: bolder;
+	color: var(--very-dark-blue);
+}
+
+.container p {
+	margin: 20px 30px 40px;
+	line-height: 1.7;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 80vw;
 	height: auto;
+	background-color: #fff;
+	margin-bottom: 30px;
+	padding: 30px; 
+	border-radius: 10px;
+	box-shadow: 2px 10px 20px #ddd;
 }
 
-.rating-number {
-	padding: 15px 20px;
-}
+.card img {
+	align-self: flex-end;
 }
 
+.one {
+	border-top: 5px solid var(--cyan);
+}
+
+.two {
+	border-top: 5px solid var(--red);
+}
+
+.card h2 {
+	color: var(--very-dark-blue)
+}
+
+.three {
+	border-top: 5px solid var(--orange);
+} 
+
+.four {
+	border-top: 5px solid var(--blue);
+}
+
+.card p {
+line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+	.cards {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		
+	}
+
+	.container p {
+		margin: 20px 0 40px;
+	}
+
+	.container h1, .content {
+		width: 50%;
+		margin: 0 auto 45px !important;
+	}
+
+	.card {
+		width: 48%;
+		padding: 30px;
+	}
+}
+
+@media screen and (min-width: 1250px) {
+	body {
+		width: 100%;
+	}
+
+	.cards {
+		display: grid;
+		width: 1000px;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		justify-content: center;
+	}
+
+	.card {
+		width: 380px;
+		height: 300px;
+	}
+
+	.one {
+		grid-column: 1/2;
+		grid-row: 1/3;
+		align-self: center;
+	}
+
+	.two, .three {
+		grid-column: 2 / 3;
+	}
+	
+	.four {
+		grid-column: 3 / 4;
+		grid-row: 1/3;
+		align-self: center;
+	}
+	
+}
